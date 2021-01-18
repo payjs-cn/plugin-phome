@@ -13,4 +13,4 @@
 后台直接设置选择payjs商户号和通信秘钥即可正常使用
 
 ### 下载地址
-https://github.com/payjs-cn/plugin-phome/releases/download/1.0/phome-payjs-plugin.zip
+https://github.com/payjs-cn/plugin-phome/archive/V1.0.1.zip
