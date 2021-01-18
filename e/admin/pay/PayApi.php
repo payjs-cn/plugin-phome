@@ -76,7 +76,7 @@ function setPayjs()
         $empire->query("insert into {$dbtbpre}enewspayapi (paytype, myorder, paysay, payname) values('payjs', 0, 'PAYJS是为个人开发者、创业者提供的个人支付接口（https://payjs.cn/）', '微信支付')");
     }
 
-    $rst = $empire->query("SELECT column_name FROM information_schema.columns WHERE table_name='phome_enewspayrecord'  AND column_name='status'");
+    $rst = $empire->query("SELECT column_name FROM information_schema.columns WHERE table_name='{$dbtbpre}enewspayrecord'  AND column_name='status'");
     if($rst->num_rows == 0){
         $empire->query("alter table {$dbtbpre}enewspayrecord add phome char(20) not null,add status int(1) not null,add bgid int(3) not null");
     }
