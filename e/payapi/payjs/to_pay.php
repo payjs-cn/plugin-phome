@@ -56,22 +56,22 @@ $empire->query("delete from {$dbtbpre}enewspayrecord where UNIX_TIMESTAMP(postti
 
 // 配置通信参数
 $price = $money;
-$config = [
+$config = array(
     'mchid' => $payr['payuser'],   // 配置商户号
     'key'   => $payr['paykey'],   // 配置通信密钥
-];
+);
 
 // 初始化
 include_once("payjs.class.php");
 $payjs = new Payjs($config);
 
-$parameter = [
+$parameter = array(
     'mchid' => $payr['payuser'],
 		"notify_url"	=> $notifyUrl,
 		"out_trade_no"	=> (string) $outTradeNo,
 		"total_fee"	=> (float) $price * 100,
 		'body' => '用户充值'
-];
+);
 //请求URL
 $url = $payjs->cashier($parameter);
 $url = 'https://qr.payjs.cn/image?body=' . urlencode($url);

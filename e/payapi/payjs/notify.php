@@ -12,10 +12,10 @@ if (!$_POST) {
 $arr = $_POST;
 $mchid = $payr['payuser'];
 $key =  $payr['paykey'];
-$config = [
+$config = array(
     'mchid' => $mchid,   // 配置商户号
     'key'   => $key,   // 配置通信密钥
-];
+);
 
 // 初始化
 include_once("payjs.class.php");

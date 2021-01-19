@@ -59,7 +59,7 @@ class Payjs
     public function refund($payjs_order_id)
     {
         $this->url = $this->api_url_refund;
-        $data      = ['payjs_order_id' => $payjs_order_id];
+        $data      = array('payjs_order_id' => $payjs_order_id);
         return $this->post($data);
     }
 
@@ -67,7 +67,7 @@ class Payjs
     public function close($payjs_order_id)
     {
         $this->url = $this->api_url_close;
-        $data      = ['payjs_order_id' => $payjs_order_id];
+        $data      = array('payjs_order_id' => $payjs_order_id);
         return $this->post($data);
     }
 
@@ -75,7 +75,7 @@ class Payjs
     public function check($payjs_order_id)
     {
         $this->url = $this->api_url_check;
-        $data      = ['payjs_order_id' => $payjs_order_id];
+        $data      = array('payjs_order_id' => $payjs_order_id);
         return $this->post($data);
     }
 
@@ -83,7 +83,7 @@ class Payjs
     public function user($openid)
     {
         $this->url = $this->api_url_user;
-        $data      = ['openid' => $openid];
+        $data      = array('openid' => $openid);
         return $this->post($data);
     }
 
@@ -91,7 +91,7 @@ class Payjs
     public function info()
     {
         $this->url = $this->api_url_info;
-        $data      = [];
+        $data      = array();
         return $this->post($data);
     }
 
@@ -99,7 +99,7 @@ class Payjs
     public function bank($name)
     {
         $this->url = $this->api_url_bank;
-        $data      = ['bank' => $name];
+        $data      = array('bank' => $name);
         return $this->post($data);
     }
 
