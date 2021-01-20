@@ -21,8 +21,8 @@ $config = array(
 include_once("payjs.class.php");
 $payjs = new Payjs($config);
 $res = $payjs->notify($arr);
-file_put_contents('payjs.txt', var_export($arr, true));
-if ($res === true) {
+file_put_contents('payjs.txt', var_export($res, true));
+if ($res != "验签失败") {
 	//交易状态
 	$trade_status = $_POST['return_code'];
 	$orderid = $_POST['out_trade_no'];
